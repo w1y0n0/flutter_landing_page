@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_landing_page/core.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../controller/home_controller.dart';
 
@@ -27,17 +28,17 @@ class HomeView extends StatefulWidget {
                 decoration: const BoxDecoration(
                   color: Colors.blue,
                 ),
-                child: const Row(
+                child: Row(
                   children: [
                     Icon(
-                      Icons.developer_board,
-                      size: 24.0,
+                      MdiIcons.facebookGaming,
+                      size: 36.0,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 6.0,
                     ),
-                    Text(
+                    const Text(
                       "SEO Solutions",
                       style: TextStyle(
                         fontSize: 24.0,
@@ -45,16 +46,16 @@ class HomeView extends StatefulWidget {
                         color: Colors.white,
                       ),
                     ),
-                    Spacer(),
-                    MenuWidget(text: "About"),
-                    SizedBox(width: 20.0),
-                    MenuWidget(text: "Tutor"),
-                    SizedBox(width: 20.0),
-                    MenuWidget(text: "Program"),
-                    SizedBox(width: 20.0),
-                    MenuWidget(text: "Location"),
-                    SizedBox(width: 20.0),
-                    MenuWidget(text: "Our Agency"),
+                    const Spacer(),
+                    const MenuWidget(text: "About"),
+                    const SizedBox(width: 20.0),
+                    const MenuWidget(text: "Tutor"),
+                    const SizedBox(width: 20.0),
+                    const MenuWidget(text: "Program"),
+                    const SizedBox(width: 20.0),
+                    const MenuWidget(text: "Location"),
+                    const SizedBox(width: 20.0),
+                    const MenuWidget(text: "Our Agency"),
                   ],
                 ),
               ),
@@ -68,6 +69,7 @@ class HomeView extends StatefulWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // Hero Section
                     const Row(
                       children: [
                         Expanded(
@@ -83,7 +85,7 @@ class HomeView extends StatefulWidget {
                               Text(
                                 "Data science for SEO",
                                 style: TextStyle(
-                                  fontSize: 30.0,
+                                  fontSize: 40.0,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -107,14 +109,18 @@ class HomeView extends StatefulWidget {
                         ),
                       ],
                     ),
+                    // End Hero Section
                     const SizedBox(
                       height: 30.0,
                     ),
-                    // row => bikin Row()
-                    // col => bikin Column()
-                    // Alt+E => wrap with Expanded
-                    // Alt+C => wrap with Container
-                    // Alt+Shift+Enter => delete "const"
+                    // Event Section
+                    /*
+                    row => bikin Row()
+                    col => bikin Column()
+                    Alt+E => wrap with Expanded
+                    Alt+C => wrap with Container
+                    Alt+Shift+Enter => delete "const"
+                    */
                     Container(
                       // clipAnti
                       clipBehavior: Clip.antiAlias,
@@ -159,7 +165,7 @@ class HomeView extends StatefulWidget {
                             ),
                             Expanded(
                               child: Container(
-                                color: Colors.blue[300],
+                                color: Colors.blue,
                                 child: Padding(
                                   padding: const EdgeInsets.all(16.0),
                                   child: Column(
@@ -179,7 +185,7 @@ class HomeView extends StatefulWidget {
                                         style: TextStyle(
                                           fontSize: 30.0,
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.blue[900],
+                                          color: Colors.blueGrey[900],
                                         ),
                                       ),
                                       const SizedBox(
@@ -201,6 +207,120 @@ class HomeView extends StatefulWidget {
                         ),
                       ),
                     ),
+                    // End Event Section
+                    const SizedBox(
+                      height: 30.0,
+                    ),
+                    // About Course
+                    Container(
+                      // clipAnti
+                      clipBehavior: Clip.antiAlias,
+                      // decoration
+                      decoration: const BoxDecoration(
+                        // radius
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(12.0),
+                        ),
+                        // color: Colors.red,
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 200,
+                            padding: const EdgeInsets.all(16.0),
+                            decoration: const BoxDecoration(
+                              color: Colors.blue,
+                            ),
+                            child: const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "24",
+                                  style: TextStyle(
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Hours",
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Text(
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                                Text(
+                                  "Level",
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Text(
+                                  "Intermediate",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 20.0,
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "About the course",
+                                  style: TextStyle(
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 20.0,
+                                ),
+                                const Text(
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 20.0,
+                                ),
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.red,
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text(
+                                    "Register",
+                                    // sty
+                                    style: TextStyle(
+                                      // cWhite
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // End About Course
                   ],
                 ),
               ),
